@@ -4,105 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Max's Website</title>
+    <title>Max Rubin-Toles</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f4e1c1; /* Soft desert color */
+            background-color: #f4e1c1; /* Desert-inspired background */
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
-        }
-        h1, h2 {
-            color: #4a3c31; /* Dark brown */
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-        }
-        p, ul {
-            font-size: 1.1rem;
-            color: #5f4e37; /* Light brown */
-            line-height: 1.5;
         }
         .container {
-            background-color: #fff4e6; /* Lighter desert tone */
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 40px;
             max-width: 900px;
             width: 100%;
-            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff4e6; /* Lighter desert tone */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .image-container {
+        .header {
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
-            text-align: center;
         }
-        .bio-section {
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .header .info {
             text-align: left;
         }
-        .smaller-text {
-            font-size: 0.9rem;
-            color: #7f8c8d;
+        .header .info h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #4a3c31; /* Dark brown */
         }
-        a {
+        .header .info p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #5f4e37; /* Light brown */
+        }
+        .header .info .social-links a {
+            margin-right: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .header .info .social-links a:hover {
+            text-decoration: underline;
+        }
+        .tabs {
+            display: flex;
+            justify-content: flex-start;
+            margin: 20px 0;
+            border-bottom: 2px solid #ddd;
+        }
+        .tabs a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #4a3c31;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 2px solid transparent;
+        }
+        .tabs a:hover,
+        .tabs a.active {
+            border-color: #4a3c31; /* Dark brown for active tab */
+        }
+        .section {
+            text-align: left;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #4a3c31;
+        }
+        .section p {
+            font-size: 1.1rem;
+            color: #5f4e37;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin: 10px 0;
+        }
+        .section ul li a {
             color: #3498db;
             text-decoration: none;
         }
-        a:hover {
+        .section ul li a:hover {
             text-decoration: underline;
         }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            margin: 0 10px;
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Insert image of you here -->
-        <div class="image-container">
-            <img src="YOUR_IMAGE_URL_HERE" alt="Max's Picture" style="width: 150px; height: 150px; border-radius: 50%;">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="YOUR_IMAGE_URL_HERE" alt="Max Rubin-Toles">
+            <div class="info">
+                <h1>Max Rubin-Toles</h1>
+                <p>Senior at Penn | Aspiring CS PhD</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+                    <a href="https://github.com/maxrubintoles" target="_blank">GitHub</a>
+                </div>
+            </div>
         </div>
-        
-        <h1>Max Rubin-Toles</h1>
-        <h2>Senior at Penn | Aspiring CS PhD</h2>
-        
-        <div class="bio-section">
-            <p>I'm a senior at Penn interested in understanding AI systems and making them reliable. I'm currently applying to CS PhD programs for Fall 2025.</p>
 
-            <p class="smaller-text">
-                I also enjoy Magic: The Gathering, indoor bouldering, writing (substack: <a href="https://maxonbion.substack.com/subscribe" target="_blank">Minimax</a>), and drawing 
-                <a href="https://sites.google.com/view/maxrubin-toles/home" target="_blank">drawing</a>.
-            </p>
-            
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <a href="#bio" class="active">Bio</a>
+            <a href="#publications">Publications</a>
+            <a href="#resume">Resume</a>
+        </div>
+
+        <!-- Bio Section -->
+        <div class="section" id="bio">
+            <h2>Bio</h2>
+            <p>I'm a senior at Penn interested in understanding AI systems and making them reliable. I'm currently applying to CS PhD programs for Fall 2025.</p>
+            <p>I also enjoy Magic: The Gathering, indoor bouldering, writing (substack: <a href="https://maxonbion.substack.com/subscribe" target="_blank">Minimax</a>), and <a href="https://sites.google.com/view/maxrubin-toles/home" target="_blank">drawing</a>.</p>
+        </div>
+
+        <!-- Publications Section -->
+        <div class="section" id="publications">
             <h2>Publications</h2>
             <ul>
                 <li>
-                    Maya Gambhir*, Max Rubin-Toles <strong>*</strong>, Keshav Ramji, Surbhi Goel, Aaron Roth. 
+                    Maya Gambhir*, <strong>MRT</strong>*, Keshav Ramji, Surbhi Goel, Aaron Roth. 
                     <a href="https://drive.google.com/file/d/1wbRn4o7-2dSLNwLjcAspHBf4J-EXxtV1/view?usp=sharing" target="_blank">Conformal Language Model Reasoning with Coherent Factuality</a>. 
                     Accepted at NeurIPS 2024 Workshop on Statistical Frontiers in LLMs and Foundation Models. Submitted to ICLR 2025 Conference. *equal contribution
                 </li>
             </ul>
-            
-            <p class="smaller-text">
-                <a href="https://linktr.ee/maxonbion" target="_blank">Linktree</a>
-            </p>
         </div>
-        
-        <div class="social-links">
-            <!-- Add any social links here -->
-            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-            <a href="https://github.com/maxrubintoles" target="_blank">GitHub</a>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p><a href="https://linktr.ee/maxonbion" target="_blank">Linktree</a></p>
         </div>
     </div>
 
